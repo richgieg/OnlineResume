@@ -128,3 +128,15 @@ function locationizer(work) {
 
     return locations;
 }
+
+function inName(fullName) {
+    names = fullName.split(" ");
+    names[0] = names[0].substr(0, 1).toUpperCase() +
+        names[0].substr(1).toLowerCase();
+    names[1] = names[1].toUpperCase();
+    newName = names.join(" ");
+    return newName;
+}
+
+$("#main").append(internationalizeButton);
+$("#main").append(inName("Richard Gieg"));
