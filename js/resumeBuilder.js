@@ -15,22 +15,58 @@ var bio = {
     "bioPic": "images/fry.jpg"
 };
 
- var formattedName = HTMLheaderName.replace("%data%", bio.name);
- var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
+var work = {
+    "jobs": [
+        {
+            "employer": "Schurman Retail Group",
+            "title": "Systems Analyst",
+            "location": "Fairfield, CA",
+            "dates": "2015",
+            "description": "Systems Analyst description."
+        }
+    ]
+};
 
-$("#header").prepend(formattedRole);
-$("#header").prepend(formattedName);
+var projects = {
+    "projects": [
+        {
+            "title": "Project #1",
+            "dates": "2015",
+            "description": "Project description.",
+            "images": [
+                "images/project1a.jpg",
+                "images/project1b.jpg",
+                "images/project1c.jpg"
+            ]
+        }
+    ]
+};
 
-
-var work = {};
-work.position = "Course Developer";
-work.employer = "Udacity";
-work.years = 0.3;
-
-var education = {};
-education["name"] = "Nova Southeastern University";
-education["years"] = "2005-2013";
-education["city"] = "Fort Lauderdale, FL, US";
-
-$("#main").append(work["position"]);
-$("#main").append(education.name);
+var education = {
+    "schools": [
+        {
+            "name": "Nova Southeastern University",
+            "location": "Fort Lauderdale, FL",
+            "degree": "Masters",
+            "majors": ["CS"],
+            "dates": "2013",
+            "url": "http://example.com"
+        },
+        {
+            "name": "Eckerd College",
+            "location": "Saint Petersburg, FL",
+            "degree": "BA",
+            "majors": ["CS"],
+            "dates": "2003",
+            "url": "http://example.com"
+        }
+    ],
+    "onlineCourses": [
+        {
+            "title": "JavaScript Basics",
+            "school": "Udacity",
+            "dates": "2014",
+            "url": "http://www.udacity.com/course/ud804"
+        }
+    ]
+};
