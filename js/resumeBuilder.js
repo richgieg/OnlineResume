@@ -6,7 +6,7 @@ var bio = {
         "email": "johndoe@example.com",
         "github": "johndoe",
         "twitter": "@johndoe",
-        "location": "SF Bay Area"
+        "location": "Fairfield, CA"
     },
     "welcomeMessage": "lorm ipsum dolor sit amet etc etc etc.",
     "skills": [
@@ -41,6 +41,27 @@ var work = {
     ]
 };
 
+work.display = function() {
+    for (var job in work.jobs) {
+        $("#workExperience").append(HTMLworkStart);
+
+        var formattedEmployer =
+            HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
+        var formattedTitle =
+            HTMLworkTitle.replace("%data%", work.jobs[job].title);
+        var formattedEmployerTitle = formattedEmployer + formattedTitle;
+        $(".work-entry:last").append(formattedEmployerTitle);
+
+        var formattedDates =
+            HTMLworkDates.replace("%data%", work.jobs[job].dates);
+        $(".work-entry:last").append(formattedDates);
+
+        var formattedDescription =
+            HTMLworkDescription.replace("%data%", work.jobs[job].description);
+        $(".work-entry:last").append(formattedDescription);
+    }
+};
+
 var projects = {
     "projects": [
         {
@@ -52,8 +73,52 @@ var projects = {
                 "images/project1b.jpg",
                 "images/project1c.jpg"
             ]
+        },
+        {
+            "title": "Project #2",
+            "dates": "2015",
+            "description": "Project description.",
+            "images": [
+                "images/project2a.jpg",
+                "images/project2b.jpg",
+                "images/project2c.jpg"
+            ]
+        },
+        {
+            "title": "Project #3",
+            "dates": "2015",
+            "description": "Project description.",
+            "images": [
+                "images/project3a.jpg",
+                "images/project3b.jpg",
+                "images/project3c.jpg"
+            ]
         }
     ]
+};
+
+projects.display = function() {
+    for (var project in projects.projects) {
+        $("#projects").append(HTMLprojectStart);
+
+        var formattedTitle =
+            HTMLprojectTitle.replace("%data%", projects.projects[project].title);
+        $(".project-entry:last").append(formattedTitle);
+
+        var formattedDates =
+            HTMLprojectDates.replace("%data%", projects.projects[project].dates);
+        $(".project-entry:last").append(formattedDates);
+
+        var formattedDescription =
+            HTMLprojectDescription.replace("%data%", projects.projects[project].description);
+        $(".project-entry:last").append(formattedDescription);
+
+        for (var image in projects.projects[project].images) {
+            var formattedImage =
+                HTMLprojectImage.replace("%data%", projects.projects[project].images[image]);
+            $(".project-entry:last").append(formattedImage);
+        }
+    }
 };
 
 var education = {
@@ -85,58 +150,22 @@ var education = {
     ]
 };
 
-// if (bio.skills.length > 0) {
-//     $("#header").append(HTMLskillsStart);
-
-//     var
-// }
-
-function displayWork() {
-    for (var job in work.jobs) {
-        $("#workExperience").append(HTMLworkStart);
-
-        var formattedEmployer =
-            HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
-        var formattedTitle =
-            HTMLworkTitle.replace("%data%", work.jobs[job].title);
-        var formattedEmployerTitle = formattedEmployer + formattedTitle;
-        $(".work-entry:last").append(formattedEmployerTitle);
-
-        var formattedDates =
-            HTMLworkDates.replace("%data%", work.jobs[job].dates);
-        $(".work-entry:last").append(formattedDates);
-
-        var formattedDescription =
-            HTMLworkDescription.replace("%data%", work.jobs[job].description);
-        $(".work-entry:last").append(formattedDescription);
-    }
-}
-
-displayWork();
-
 $(document).click(function(loc) {
     var x = loc.pageX;
     var y = loc.pageY;
     logClicks(x, y);
 });
 
-function locationizer(work) {
-    locations = [];
-    for (var job in work.jobs) {
-        locations.push(work.jobs[job].location);
-    }
+// function locationizer(work) {
+//     locations = [];
+//     for (var job in work.jobs) {
+//         locations.push(work.jobs[job].location);
+//     }
 
-    return locations;
-}
+//     return locations;
+// }
 
-function inName(fullName) {
-    names = fullName.split(" ");
-    names[0] = names[0].substr(0, 1).toUpperCase() +
-        names[0].substr(1).toLowerCase();
-    names[1] = names[1].toUpperCase();
-    newName = names.join(" ");
-    return newName;
-}
+work.display();
+projects.display();
 
-$("#main").append(internationalizeButton);
-$("#main").append(inName("Richard Gieg"));
+$("#mapDiv").append(googleMap);
