@@ -92,7 +92,7 @@ var education = {
 // }
 
 function displayWork() {
-    for (job in work.jobs) {
+    for (var job in work.jobs) {
         $("#workExperience").append(HTMLworkStart);
 
         var formattedEmployer =
@@ -119,3 +119,12 @@ $(document).click(function(loc) {
     var y = loc.pageY;
     logClicks(x, y);
 });
+
+function locationizer(work) {
+    locations = [];
+    for (var job in work.jobs) {
+        locations.push(work.jobs[job].location);
+    }
+
+    return locations;
+}
