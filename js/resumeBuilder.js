@@ -23,6 +23,20 @@ var work = {
             "location": "Fairfield, CA",
             "dates": "2015",
             "description": "Systems Analyst description."
+        },
+        {
+            "employer": "Schurman Retail Group",
+            "title": "Systems Analyst",
+            "location": "Fairfield, CA",
+            "dates": "2015",
+            "description": "Systems Analyst description."
+        },
+        {
+            "employer": "Schurman Retail Group",
+            "title": "Systems Analyst",
+            "location": "Fairfield, CA",
+            "dates": "2015",
+            "description": "Systems Analyst description."
         }
     ]
 };
@@ -70,3 +84,20 @@ var education = {
         }
     ]
 };
+
+// if (bio.skills.length > 0) {
+//     $("#header").append(HTMLskillsStart);
+
+//     var
+// }
+
+for (job in work.jobs) {
+    $("#workExperience").append(HTMLworkStart);
+
+    var formattedEmployer =
+        HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
+    var formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
+    var formattedEmployerTitle = formattedEmployer + formattedTitle;
+
+    $(".work-entry:last").append(formattedEmployerTitle);
+}
