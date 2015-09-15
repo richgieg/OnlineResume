@@ -39,7 +39,7 @@ bio.display = function() {
   $('#header').append(formattedPic);
 
   // Welcome message.
-  var formattedWelcome = HTMLWelcomeMsg.replace('%data%', this.welcomeMessage);
+  var formattedWelcome = HTMLwelcomeMsg.replace('%data%', this.welcomeMessage);
   $('#header').append(formattedWelcome);
 
   // Skills.
