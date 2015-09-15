@@ -11,7 +11,24 @@ var bio = {
   },
   "welcomeMessage": "Self-driven and passionate software wizard.",
   "skills": [
-    "awesomeness", "delivering things", "cryogenic sleep", "saving the world"
+    "Problem Solving",
+    "Python",
+    "JavaScript",
+    "HTML",
+    "CSS",
+    "C",
+    "C++",
+    "C#",
+    "Assembly (x86/x64)",
+    "Debugging",
+    "Reverse Engineering",
+    ".NET Framework",
+    "Operating System Development",
+    "SQL",
+    "Win32 API",
+    "Troubleshooting",
+    "Windows Forms",
+    "ASP.NET MVC"
   ],
   "bioPic": "images/bio-pic.jpg"
 };
