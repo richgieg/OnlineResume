@@ -22,7 +22,7 @@ bio.displayNameAndRole = function() {
   var formattedRole = HTMLheaderRole.replace('%data%', this.role);
   $('#header').prepend(formattedRole);
   $('#header').prepend(formattedName);
-}
+};
 
 bio.displayContacts = function() {
   for (var contact in this.contacts) {
@@ -30,7 +30,7 @@ bio.displayContacts = function() {
     formattedContact = formattedContact.replace('%data%', this.contacts[contact]);
     $('#topContacts, #footerContacts').append(formattedContact);
   }
-}
+};
 
 bio.displayPicAndWelcomeMessage = function() {
   // Bio pic.
@@ -40,7 +40,7 @@ bio.displayPicAndWelcomeMessage = function() {
   // Welcome message.
   var formattedWelcome = HTMLwelcomeMsg.replace('%data%', this.welcomeMessage);
   $('#header').append(formattedWelcome);
-}
+};
 
 bio.displaySkills = function() {
   var len = this.skills.length;
@@ -51,14 +51,14 @@ bio.displaySkills = function() {
       $('#skills').append(formattedSkill);
     }
   }
-}
+};
 
 bio.display = function() {
   this.displayNameAndRole();
   this.displayContacts();
   this.displayPicAndWelcomeMessage();
   this.displaySkills();
-}
+};
 
 // Work object definition.
 var work = {
@@ -219,7 +219,7 @@ education.displaySchools = function() {
       HTMLschoolLocation.replace('%data%', this.schools[i].location);
     $('.education-entry:last').append(formattedLocation);
   }
-}
+};
 
 education.displayOnlineCourses = function() {
   var len = this.onlineCourses.length;
@@ -243,12 +243,12 @@ education.displayOnlineCourses = function() {
       $('.education-entry:last').append(formattedUrl);
     }
   }
-}
+};
 
 education.display = function() {
   this.displaySchools();
   this.displayOnlineCourses();
-}
+};
 
 // Display info from all objects.
 bio.display();
