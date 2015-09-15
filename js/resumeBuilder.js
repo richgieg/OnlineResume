@@ -122,20 +122,12 @@ projects.display = function() {
 var education = {
   "schools": [
     {
-      "name": "Nova Southeastern University",
-      "location": "Fort Lauderdale, FL",
-      "degree": "Masters",
-      "majors": ["CS"],
-      "dates": "2013",
-      "url": "http://example.com"
-    },
-    {
-      "name": "Eckerd College",
-      "location": "Saint Petersburg, FL",
-      "degree": "BA",
-      "majors": ["CS"],
-      "dates": "2003",
-      "url": "http://example.com"
+      "name": "Solano Community College",
+      "location": "Suisun City, CA",
+      "degree": "N/A",
+      "majors": ["Computer Programming", "Music"],
+      "dates": "2001",
+      "url": "http://www.solano.edu/"
     }
   ],
   "onlineCourses": [
