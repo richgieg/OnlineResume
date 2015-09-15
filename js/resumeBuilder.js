@@ -1,36 +1,36 @@
 // Bio object definition.
 var bio = {
-  "name": "Richard Gieg",
-  "role": "Software Engineer",
-  "contacts": {
-    "mobile": "555-555-5555",
-    "email": "richgieg@example.com",
-    "github": "richgieg",
-    "twitter": "@richgieg",
-    "location": "Fairfield, CA"
+  'name': 'Richard Gieg',
+  'role': 'Software Engineer',
+  'contacts': {
+    'mobile': '555-555-5555',
+    'email': 'richgieg@example.com',
+    'github': 'richgieg',
+    'twitter': '@richgieg',
+    'location': 'Fairfield, CA'
   },
-  "welcomeMessage": "Self-driven and passionate software wizard.",
-  "skills": [
-    "Problem Solving",
-    "Python",
-    "JavaScript",
-    "HTML",
-    "CSS",
-    "C",
-    "C++",
-    "C#",
-    "Assembly (x86/x64)",
-    "Debugging",
-    "Reverse Engineering",
-    ".NET Framework",
-    "Operating System Development",
-    "SQL",
-    "Win32 API",
-    "Troubleshooting",
-    "Windows Forms",
-    "ASP.NET MVC"
+  'welcomeMessage': 'Self-driven and passionate software wizard.',
+  'skills': [
+    'Problem Solving',
+    'Python',
+    'JavaScript',
+    'HTML',
+    'CSS',
+    'C',
+    'C++',
+    'C#',
+    'Assembly (x86/x64)',
+    'Debugging',
+    'Reverse Engineering',
+    '.NET Framework',
+    'Operating System Development',
+    'SQL',
+    'Win32 API',
+    'Troubleshooting',
+    'Windows Forms',
+    'ASP.NET MVC'
   ],
-  "bioPic": "images/bio-pic.jpg"
+  'bioPic': 'images/bio-pic.jpg'
 };
 
 // Bio object methods.
@@ -79,27 +79,27 @@ bio.display = function() {
 
 // Work object definition.
 var work = {
-  "jobs": [
+  'jobs': [
     {
-      "employer": "Schurman Retail Group",
-      "title": "Systems Analyst",
-      "location": "Fairfield, CA",
-      "dates": "2015",
-      "description": "Systems Analyst description."
+      'employer': 'Schurman Retail Group',
+      'title': 'Systems Analyst',
+      'location': 'Fairfield, CA',
+      'dates': '2015',
+      'description': 'Systems Analyst description.'
     },
     {
-      "employer": "Schurman Retail Group",
-      "title": "Systems Analyst",
-      "location": "Fairfield, CA",
-      "dates": "2015",
-      "description": "Systems Analyst description."
+      'employer': 'Schurman Retail Group',
+      'title': 'Systems Analyst',
+      'location': 'Fairfield, CA',
+      'dates': '2015',
+      'description': 'Systems Analyst description.'
     },
     {
-      "employer": "Schurman Retail Group",
-      "title": "Systems Analyst",
-      "location": "Fairfield, CA",
-      "dates": "2015",
-      "description": "Systems Analyst description."
+      'employer': 'Schurman Retail Group',
+      'title': 'Systems Analyst',
+      'location': 'Fairfield, CA',
+      'dates': '2015',
+      'description': 'Systems Analyst description.'
     }
   ]
 };
@@ -108,52 +108,52 @@ var work = {
 work.display = function() {
   var len = this.jobs.length;
   for (var i = 0; i < len; i++) {
-    $("#workExperience").append(HTMLworkStart);
+    $('#workExperience').append(HTMLworkStart);
 
     var formattedEmployer =
-      HTMLworkEmployer.replace("%data%", this.jobs[i].employer);
-    var formattedTitle = HTMLworkTitle.replace("%data%", this.jobs[i].title);
+      HTMLworkEmployer.replace('%data%', this.jobs[i].employer);
+    var formattedTitle = HTMLworkTitle.replace('%data%', this.jobs[i].title);
     var formattedEmployerTitle = formattedEmployer + formattedTitle;
-    $(".work-entry:last").append(formattedEmployerTitle);
+    $('.work-entry:last').append(formattedEmployerTitle);
 
-    var formattedDates = HTMLworkDates.replace("%data%", this.jobs[i].dates);
-    $(".work-entry:last").append(formattedDates);
+    var formattedDates = HTMLworkDates.replace('%data%', this.jobs[i].dates);
+    $('.work-entry:last').append(formattedDates);
 
     var formattedDescription =
-      HTMLworkDescription.replace("%data%", this.jobs[i].description);
-    $(".work-entry:last").append(formattedDescription);
+      HTMLworkDescription.replace('%data%', this.jobs[i].description);
+    $('.work-entry:last').append(formattedDescription);
   }
 };
 
 // Projects object definition.
 var projects = {
-  "projects": [
+  'projects': [
     {
-      "title": "Movie Trailer Website",
-      "dates": "2015",
-      "description": "This is the first project in my pursuit of the " +
-                      "Full-Stack Web Developer Nanodegree from Udacity. " +
-                      "It's a simple web page that's generated dynamically " +
-                      "from Python code. It showcases six comedy movies I " +
-                      "enjoy and allows you to view their trailers.",
-      "images": [
-        "images/movie-trailer-website.jpg",
+      'title': 'Movie Trailer Website',
+      'dates': '2015',
+      'description': 'This is the first project in my pursuit of the ' +
+                      'Full-Stack Web Developer Nanodegree from Udacity. ' +
+                      'It\'s a simple web page that\'s generated dynamically ' +
+                      'from Python code. It showcases six comedy movies I ' +
+                      'enjoy and allows you to view their trailers.',
+      'images': [
+        'images/movie-trailer-website.jpg',
       ]
     },
     {
-      "title": "Portfolio Site",
-      "dates": "2015",
-      "description": "Before setting out to complete this project, I had " +
-                      "the pleasure of working through three supporting " +
-                      "Udacity courses, each one geared towards planning " +
-                      "and building websites using HTML and CSS, with " +
-                      "responsiveness in mind. I believe through executing " +
-                      "this project I have demonstrated my ability to " +
-                      "properly implement the above tools in order to create " +
-                      "websites that look and behave as well on mobile " +
-                      "devices as they do on the desktop.",
-      "images": [
-        "images/portfolio-site.jpg",
+      'title': 'Portfolio Site',
+      'dates': '2015',
+      'description': 'Before setting out to complete this project, I had ' +
+                      'the pleasure of working through three supporting ' +
+                      'Udacity courses, each one geared towards planning ' +
+                      'and building websites using HTML and CSS, with ' +
+                      'responsiveness in mind. I believe through executing ' +
+                      'this project I have demonstrated my ability to ' +
+                      'properly implement the above tools in order to create ' +
+                      'websites that look and behave as well on mobile ' +
+                      'devices as they do on the desktop.',
+      'images': [
+        'images/portfolio-site.jpg',
       ]
     }
   ]
@@ -163,46 +163,46 @@ var projects = {
 projects.display = function() {
   var len = this.projects.length;
   for (var i = 0; i < len; i++) {
-    $("#projects").append(HTMLprojectStart);
+    $('#projects').append(HTMLprojectStart);
 
     var formattedTitle =
-      HTMLprojectTitle.replace("%data%", this.projects[i].title);
-    $(".project-entry:last").append(formattedTitle);
+      HTMLprojectTitle.replace('%data%', this.projects[i].title);
+    $('.project-entry:last').append(formattedTitle);
 
     var formattedDates =
-      HTMLprojectDates.replace("%data%", this.projects[i].dates);
-    $(".project-entry:last").append(formattedDates);
+      HTMLprojectDates.replace('%data%', this.projects[i].dates);
+    $('.project-entry:last').append(formattedDates);
 
     var formattedDescription =
-      HTMLprojectDescription.replace("%data%", this.projects[i].description);
-    $(".project-entry:last").append(formattedDescription);
+      HTMLprojectDescription.replace('%data%', this.projects[i].description);
+    $('.project-entry:last').append(formattedDescription);
 
     for (var image in projects.projects[i].images) {
       var formattedImage =
-        HTMLprojectImage.replace("%data%", this.projects[i].images[image]);
-      $(".project-entry:last").append(formattedImage);
+        HTMLprojectImage.replace('%data%', this.projects[i].images[image]);
+      $('.project-entry:last').append(formattedImage);
     }
   }
 };
 
 // Education object definition.
 var education = {
-  "schools": [
+  'schools': [
     {
-      "name": "Solano Community College",
-      "location": "Suisun City, CA",
-      "degree": "N/A",
-      "majors": ["Computer Programming", "Music"],
-      "date": 2004,
-      "url": "http://www.solano.edu/"
+      'name': 'Solano Community College',
+      'location': 'Suisun City, CA',
+      'degree': 'N/A',
+      'majors': ['Computer Programming', 'Music'],
+      'date': 2004,
+      'url': 'http://www.solano.edu/'
     }
   ],
-  "onlineCourses": [
+  'onlineCourses': [
     {
-      "title": "JavaScript Basics",
-      "school": "Udacity",
-      "date": 2015,
-      "url": "http://www.udacity.com/course/ud804"
+      'title': 'JavaScript Basics',
+      'school': 'Udacity',
+      'date': 2015,
+      'url': 'http://www.udacity.com/course/ud804'
     }
   ]
 };
@@ -211,23 +211,23 @@ var education = {
 education.displaySchools = function() {
   var len = this.schools.length;
   for (var i = 0; i < len; i++) {
-    $("#education").append(HTMLschoolStart);
+    $('#education').append(HTMLschoolStart);
 
     var formattedNameAndDegree =
       HTMLschoolName.replace('%data%', this.schools[i].name);
     formattedNameAndDegree = formattedNameAndDegree +
       HTMLschoolDegree.replace('%data%', this.schools[i].degree);
-    $(".education-entry:last").append(formattedNameAndDegree);
+    $('.education-entry:last').append(formattedNameAndDegree);
 
     var formattedDates =
       HTMLschoolDates.replace('%data%', this.schools[i].date);
-    $(".education-entry:last").append(formattedDates);
+    $('.education-entry:last').append(formattedDates);
 
     var mLen = this.schools[i].majors.length;
     for (var j = 0; j < mLen; j++) {
       var formattedMajor =
         HTMLschoolMajor.replace('%data%', this.schools[i].majors[j]);
-      $(".education-entry:last").append(formattedMajor);
+      $('.education-entry:last').append(formattedMajor);
     }
 
     var formattedLocation =
@@ -241,17 +241,17 @@ education.displayOnlineCourses = function() {
   if (len > 0) {
     $('#education').append(HTMLonlineClasses);
     for (var i = 0; i < len; i++) {
-      $("#education").append(HTMLschoolStart);
+      $('#education').append(HTMLschoolStart);
 
       var formattedTitleAndSchool =
         HTMLonlineTitle.replace('%data%', this.onlineCourses[i].title);
       formattedTitleAndSchool = formattedTitleAndSchool +
         HTMLonlineSchool.replace('%data%', this.onlineCourses[i].school);
-      $(".education-entry:last").append(formattedTitleAndSchool);
+      $('.education-entry:last').append(formattedTitleAndSchool);
 
       var formattedDates =
         HTMLonlineDates.replace('%data%', this.onlineCourses[i].date);
-      $(".education-entry:last").append(formattedDates);
+      $('.education-entry:last').append(formattedDates);
 
       var formattedUrl =
         HTMLonlineURL.replace('%data%', this.onlineCourses[i].url);
@@ -272,4 +272,4 @@ projects.display();
 education.display();
 
 // Load the Google map.
-$("#mapDiv").append(googleMap);
+$('#mapDiv').append(googleMap);
