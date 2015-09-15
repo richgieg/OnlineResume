@@ -199,10 +199,46 @@ var education = {
   ],
   'onlineCourses': [
     {
+      'title': 'Intro to Computer Science',
+      'school': 'Udacity',
+      'date': 2015,
+      'url': 'http://www.udacity.com/course/cs101'
+    },
+    {
+      'title': 'Intro to HTML and CSS',
+      'school': 'Udacity',
+      'date': 2015,
+      'url': 'http://www.udacity.com/course/ud304'
+    },
+    {
+      'title': 'Responsive Web Design Fundamentals',
+      'school': 'Udacity',
+      'date': 2015,
+      'url': 'http://www.udacity.com/course/ud893'
+    },
+    {
+      'title': 'Responsive Images',
+      'school': 'Udacity',
+      'date': 2015,
+      'url': 'http://www.udacity.com/course/ud882'
+    },
+    {
+      'title': 'Programming Foundations with Python',
+      'school': 'Udacity',
+      'date': 2015,
+      'url': 'http://www.udacity.com/course/ud036'
+    },
+    {
       'title': 'JavaScript Basics',
       'school': 'Udacity',
       'date': 2015,
       'url': 'http://www.udacity.com/course/ud804'
+    },
+    {
+      'title': 'Intro to jQuery',
+      'school': 'Udacity',
+      'date': 2015,
+      'url': 'http://www.udacity.com/course/ud245'
     }
   ]
 };
