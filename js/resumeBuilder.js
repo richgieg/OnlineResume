@@ -131,7 +131,11 @@ var projects = {
     {
       "title": "Movie Trailer Website",
       "dates": "2015",
-      "description": "Project description.",
+      "description": "This is the first project in my pursuit of the " +
+                      "Full-Stack Web Developer Nanodegree from Udacity. " +
+                      "It's a simple web page that's generated dynamically " +
+                      "from Python code. It showcases six comedy movies I " +
+                      "enjoy and allows you to view their trailers.",
       "images": [
         "images/movie-trailer-website.jpg",
       ]
@@ -139,7 +143,15 @@ var projects = {
     {
       "title": "Portfolio Site",
       "dates": "2015",
-      "description": "Project description.",
+      "description": "Before setting out to complete this project, I had " +
+                      "the pleasure of working through three supporting " +
+                      "Udacity courses, each one geared towards planning " +
+                      "and building websites using HTML and CSS, with " +
+                      "responsiveness in mind. I believe through executing " +
+                      "this project I have demonstrated my ability to " +
+                      "properly implement the above tools in order to create " +
+                      "websites that look and behave as well on mobile " +
+                      "devices as they do on the desktop.",
       "images": [
         "images/portfolio-site.jpg",
       ]
