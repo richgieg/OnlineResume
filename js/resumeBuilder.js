@@ -84,22 +84,69 @@ var work = {
       'employer': 'Schurman Retail Group',
       'title': 'Systems Analyst',
       'location': 'Fairfield, CA',
-      'dates': '2015',
-      'description': 'Systems Analyst description.'
+      'dates': 'November 2013 - May 2015',
+      'description': 'Creatively analyze and resolve advanced technical ' +
+                      'issues related to the point-of-sale software and ' +
+                      'hardware used by the company as well as the Windows ' +
+                      'operating system, software applications and ' +
+                      'networking in general. Design, develop and maintain ' +
+                      'software applications (primarily in C#, targeting the ' +
+                      '.NET Framework), some being utility programs for IT ' +
+                      'staff and other departments, while others are crucial ' +
+                      'to the operation of the business (polling of sales ' +
+                      'data from register computers for 400+ stores). Design ' +
+                      'and utilize test cases to thoroughly test new ' +
+                      'point-of-sale features and hardware. Provide support ' +
+                      'to Level 1 and Level 2 store support personnel when ' +
+                      'advanced technical issues are escalated. Maintain a ' +
+                      'deep understanding of the point-of-sale software used ' +
+                      'by the company, Windows internals, operating systems ' +
+                      'fundamentals and networking protocols in order to ' +
+                      'provide quick and effective support. Provide remote ' +
+                      'training and support to the Clintons IT team in the ' +
+                      'United Kingdom for the point-of-sale software used by ' +
+                      'their 400+ stores.',
     },
     {
       'employer': 'Schurman Retail Group',
-      'title': 'Systems Analyst',
+      'title': 'Technical Support Analyst II',
       'location': 'Fairfield, CA',
-      'dates': '2015',
-      'description': 'Systems Analyst description.'
+      'dates': 'April 2013 - November 2013',
+      'description': 'Continued to perform the job functions of the IT ' +
+                      'Support Specialist position. Provided technical ' +
+                      'support to IT Support Specialists on the store ' +
+                      'support help desk team when advanced technical issues ' +
+                      'arose. Continued to write software applications and ' +
+                      'scripts to improve the efficiency and effectiveness ' +
+                      'of the store support help desk team (primarily in C#, ' +
+                      'targeting the .NET Framework). Leveraged my writing ' +
+                      'skills to create knowledge base articles to be used ' +
+                      'by the help desk. Assisted in testing of new ' +
+                      'point-of-sale features and hardware. Frequently dug ' +
+                      'in to the company\'s point-of-sale software in order ' +
+                      'to gain a deeper understanding and to develop better ' +
+                      'support tools.',
     },
     {
       'employer': 'Schurman Retail Group',
-      'title': 'Systems Analyst',
+      'title': 'IT Support Specialist',
       'location': 'Fairfield, CA',
-      'dates': '2015',
-      'description': 'Systems Analyst description.'
+      'dates': 'April 2011 - April 2013',
+      'description': 'Provided friendly and effective technical support to ' +
+                      'the company\'s retail stores via phone, remote access ' +
+                      'software and sometimes in-person. Supported ' +
+                      'point-of-sale PC systems running Windows XP and ' +
+                      'Windows 7, receipt printers, pin pads, barcode ' +
+                      'scanners, routers, switches, DSL/cable modems, ' +
+                      'printers, fax machines and phones. Improved ' +
+                      'efficiency of help desk team by writing software to ' +
+                      'simplify various job functions (primarily in C#, ' +
+                      'targeting the .NET Framework). Frequently volunteered ' +
+                      'to take on difficult tasks, many times beyond the ' +
+                      'scope of the position. Was selected to travel ' +
+                      'independently to New York twice to upgrade ' +
+                      'point-of-sale hardware at some of the company\'s ' +
+                      'top-performing stores.'
     }
   ]
 };
