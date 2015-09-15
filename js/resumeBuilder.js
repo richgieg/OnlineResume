@@ -13,7 +13,7 @@ var bio = {
   "skills": [
     "awesomeness", "delivering things", "cryogenic sleep", "saving the world"
   ],
-  "bioPic": "images/fry.jpg"
+  "bioPic": "images/bio-pic.jpg"
 };
 
 // Bio object methods.
