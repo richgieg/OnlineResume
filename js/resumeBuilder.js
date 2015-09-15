@@ -112,33 +112,19 @@ work.display = function() {
 var projects = {
   "projects": [
     {
-      "title": "Project #1",
+      "title": "Movie Trailer Website",
       "dates": "2015",
       "description": "Project description.",
       "images": [
-        "images/project1a.jpg",
-        "images/project1b.jpg",
-        "images/project1c.jpg"
+        "images/movie-trailer-website.jpg",
       ]
     },
     {
-      "title": "Project #2",
+      "title": "Portfolio Site",
       "dates": "2015",
       "description": "Project description.",
       "images": [
-        "images/project2a.jpg",
-        "images/project2b.jpg",
-        "images/project2c.jpg"
-      ]
-    },
-    {
-      "title": "Project #3",
-      "dates": "2015",
-      "description": "Project description.",
-      "images": [
-        "images/project3a.jpg",
-        "images/project3b.jpg",
-        "images/project3c.jpg"
+        "images/portfolio-site.jpg",
       ]
     }
   ]
