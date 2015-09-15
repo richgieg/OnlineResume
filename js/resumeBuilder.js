@@ -198,10 +198,3 @@ education.display();
 
 // Load the Google map.
 $("#mapDiv").append(googleMap);
-
-// Log the positions of mouse clicks to the console.
-$(document).click(function(loc) {
-  var x = loc.pageX;
-  var y = loc.pageY;
-  logClicks(x, y);
-});
