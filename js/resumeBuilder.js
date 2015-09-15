@@ -3,9 +3,9 @@ var bio = {
   "role": "Software Engineer",
   "contacts": {
     "mobile": "555-555-5555",
-    "email": "johndoe@example.com",
-    "github": "johndoe",
-    "twitter": "@johndoe",
+    "email": "richgieg@example.com",
+    "github": "richgieg",
+    "twitter": "@richgieg",
     "location": "Fairfield, CA"
   },
   "welcomeMessage": "lorm ipsum dolor sit amet etc etc etc.",
@@ -20,6 +20,17 @@ bio.display = function() {
   var formattedRole = HTMLheaderRole.replace('%data%', this.role);
   $('#header').prepend(formattedRole);
   $('#header').prepend(formattedName);
+
+  var formattedMobile = HTMLmobile.replace('%data%', this.contacts.mobile);
+  var formattedEmail = HTMLemail.replace('%data%', this.contacts.email);
+  var formattedGithub = HTMLgithub.replace('%data%', this.contacts.github);
+  var formattedTwitter = HTMLtwitter.replace('%data%', this.contacts.twitter);
+  var formattedLocation = HTMLlocation.replace('%data%', this.contacts.location);
+  $('#topContacts, #footerContacts').append(formattedMobile);
+  $('#topContacts, #footerContacts').append(formattedEmail);
+  $('#topContacts, #footerContacts').append(formattedGithub);
+  $('#topContacts, #footerContacts').append(formattedTwitter);
+  $('#topContacts, #footerContacts').append(formattedLocation);
 
 
 }
