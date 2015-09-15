@@ -17,7 +17,11 @@ var bio = {
 
 bio.display = function() {
   var formattedName = HTMLheaderName.replace('%data%', this.name);
+  var formattedRole = HTMLheaderRole.replace('%data%', this.role);
+  $('#header').prepend(formattedRole);
   $('#header').prepend(formattedName);
+
+
 }
 
 var work = {
