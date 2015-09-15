@@ -128,24 +128,25 @@ var projects = {
 };
 
 projects.display = function() {
-  for (var project in this.projects) {
+  var len = this.projects.length;
+  for (var i = 0; i < len; i++) {
     $("#projects").append(HTMLprojectStart);
 
     var formattedTitle =
-      HTMLprojectTitle.replace("%data%", this.projects[project].title);
+      HTMLprojectTitle.replace("%data%", this.projects[i].title);
     $(".project-entry:last").append(formattedTitle);
 
     var formattedDates =
-      HTMLprojectDates.replace("%data%", this.projects[project].dates);
+      HTMLprojectDates.replace("%data%", this.projects[i].dates);
     $(".project-entry:last").append(formattedDates);
 
     var formattedDescription =
-      HTMLprojectDescription.replace("%data%", this.projects[project].description);
+      HTMLprojectDescription.replace("%data%", this.projects[i].description);
     $(".project-entry:last").append(formattedDescription);
 
-    for (var image in projects.projects[project].images) {
+    for (var image in projects.projects[i].images) {
       var formattedImage =
-        HTMLprojectImage.replace("%data%", this.projects[project].images[image]);
+        HTMLprojectImage.replace("%data%", this.projects[i].images[image]);
       $(".project-entry:last").append(formattedImage);
     }
   }
