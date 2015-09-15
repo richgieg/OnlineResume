@@ -15,6 +15,11 @@ var bio = {
   "bioPic": "images/fry.jpg"
 };
 
+bio.display = function() {
+  var formattedName = HTMLheaderName.replace('%data%', this.name);
+  $('#header').prepend(formattedName);
+}
+
 var work = {
   "jobs": [
     {
@@ -42,20 +47,20 @@ var work = {
 };
 
 work.display = function() {
-  for (var job in work.jobs) {
+  for (var job in this.jobs) {
     $("#workExperience").append(HTMLworkStart);
 
     var formattedEmployer =
-      HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
-    var formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
+      HTMLworkEmployer.replace("%data%", this.jobs[job].employer);
+    var formattedTitle = HTMLworkTitle.replace("%data%", this.jobs[job].title);
     var formattedEmployerTitle = formattedEmployer + formattedTitle;
     $(".work-entry:last").append(formattedEmployerTitle);
 
-    var formattedDates = HTMLworkDates.replace("%data%", work.jobs[job].dates);
+    var formattedDates = HTMLworkDates.replace("%data%", this.jobs[job].dates);
     $(".work-entry:last").append(formattedDates);
 
     var formattedDescription =
-      HTMLworkDescription.replace("%data%", work.jobs[job].description);
+      HTMLworkDescription.replace("%data%", this.jobs[job].description);
     $(".work-entry:last").append(formattedDescription);
   }
 };
@@ -96,24 +101,24 @@ var projects = {
 };
 
 projects.display = function() {
-  for (var project in projects.projects) {
+  for (var project in this.projects) {
     $("#projects").append(HTMLprojectStart);
 
     var formattedTitle =
-      HTMLprojectTitle.replace("%data%", projects.projects[project].title);
+      HTMLprojectTitle.replace("%data%", this.projects[project].title);
     $(".project-entry:last").append(formattedTitle);
 
     var formattedDates =
-      HTMLprojectDates.replace("%data%", projects.projects[project].dates);
+      HTMLprojectDates.replace("%data%", this.projects[project].dates);
     $(".project-entry:last").append(formattedDates);
 
     var formattedDescription =
-      HTMLprojectDescription.replace("%data%", projects.projects[project].description);
+      HTMLprojectDescription.replace("%data%", this.projects[project].description);
     $(".project-entry:last").append(formattedDescription);
 
     for (var image in projects.projects[project].images) {
     var formattedImage =
-      HTMLprojectImage.replace("%data%", projects.projects[project].images[image]);
+      HTMLprojectImage.replace("%data%", this.projects[project].images[image]);
     $(".project-entry:last").append(formattedImage);
     }
   }
@@ -140,13 +145,13 @@ var education = {
   ]
 };
 
-$(document).click(function(loc) {
-  var x = loc.pageX;
-  var y = loc.pageY;
-  logClicks(x, y);
-});
+education.display = function() {
 
+}
+
+bio.display();
 work.display();
 projects.display();
+education.display();
 
 $("#mapDiv").append(googleMap);
