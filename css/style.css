@@ -26,7 +26,6 @@ h6 {
 
 h1 {
   font-size: 40px;
-  color: #f5a623;
   line-height: 48px;
   display: inline;
 }
@@ -35,7 +34,7 @@ h2 {
   font-weight: bold;
   font-size: 24px;
   color: #999;
-  line-height: 29px;
+  line-height: 50px;
   padding: 10px;
 }
 
@@ -100,7 +99,7 @@ a {
 }
 
 #skills-h3 {
-  color: #f5ae23;
+  color: #b7ccb7;
   display: none;
 }
 
@@ -109,11 +108,12 @@ a {
 }
 
 .orange-text {
-  color: #f5ae23;
+  /*color: #f5ae23;*/
+  color: #b7ccb7;
 }
 
 .white-text {
-  font-weight: bold;
+  font-weight: normal;
   color: #fff;
 }
 
@@ -127,16 +127,50 @@ a {
   background-color: #4a4a4a;
 }
 
+nav {
+  background-color: #08100a;
+}
+
+nav ul {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+nav a {
+  color: #cecece
+}
+
 /* TODO: Replace with image later */
 #header {
-  background-color: #484848;
+  background-color: #1a3820;
+}
+
+#name {
+  font-family: 'Cinzel', serif;
+  font-size: 1.7em;
+  color: #b7ccb7;
+}
+
+#role {
+  display: block;
+  text-align: right;
+  color: #b7ccb7;
+  margin-top: -2.3em;
+}
+
+#topContacts {
+  margin-bottom: 3em;
 }
 
 .flex-box {
   display: -webkit-flex;
   display: flex;
+  -webkit-flex-direction: row;
   flex-direction: row;
+  -webkit-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-justify-content: space-around;
   justify-content: space-around;
   padding: 10px;
 }
@@ -158,6 +192,7 @@ ul {
 
 img {
   padding: 10px;
+  max-width: 100%;
 }
 
 span {
@@ -192,6 +227,22 @@ span {
   .welcome-message {
     display: none;
   }
+  #topContacts {
+    margin-bottom: .5em;
+  }
+  nav ul {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  #name {
+    font-size: 1.2em;
+  }
+  #role {
+    font-size: .9em;
+    margin-top: -2.5em;
+  }
 }
 
 #map {
@@ -204,11 +255,20 @@ span {
   height: 400px;
   width: 100%;
   padding-bottom: 5%;
+  overflow: hidden;
 }
 
 @media only screen and (min-width: 750px) {
   #skills-h3,
   .biopic {
     display: block;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  #main {
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }

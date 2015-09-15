@@ -9,7 +9,7 @@ var bio = {
     'twitter': '@richgieg',
     'location': 'Fairfield, CA'
   },
-  'welcomeMessage': 'Self-driven and passionate software wizard.',
+  'welcomeMessage': 'Highly-motivated and passionate software wizard.',
   'skills': [
     'Problem Solving',
     'Python',
