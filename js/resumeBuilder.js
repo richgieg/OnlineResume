@@ -23,16 +23,11 @@ bio.display = function() {
   $('#header').prepend(formattedName);
 
   // Contacts in header and footer.
-  var formattedMobile = HTMLmobile.replace('%data%', this.contacts.mobile);
-  var formattedEmail = HTMLemail.replace('%data%', this.contacts.email);
-  var formattedGithub = HTMLgithub.replace('%data%', this.contacts.github);
-  var formattedTwitter = HTMLtwitter.replace('%data%', this.contacts.twitter);
-  var formattedLocation = HTMLlocation.replace('%data%', this.contacts.location);
-  $('#topContacts, #footerContacts').append(formattedMobile);
-  $('#topContacts, #footerContacts').append(formattedEmail);
-  $('#topContacts, #footerContacts').append(formattedGithub);
-  $('#topContacts, #footerContacts').append(formattedTwitter);
-  $('#topContacts, #footerContacts').append(formattedLocation);
+  for (var contact in this.contacts) {
+    var formattedContact = HTMLcontactGeneric.replace('%contact%', contact);
+    formattedContact = formattedContact.replace('%data%', this.contacts[contact]);
+    $('#topContacts, #footerContacts').append(formattedContact);
+  }
 
   // Bio pic.
   var formattedPic = HTMLbioPic.replace('%data%', this.bioPic);
@@ -177,6 +172,19 @@ var education = {
 };
 
 education.display = function() {
+// var HTMLschoolStart = '<div class="education-entry"></div>';
+// var HTMLschoolName = '<a href="#">%data%';
+// var HTMLschoolDegree = ' -- %data%</a>';
+// var HTMLschoolDates = '<div class="date-text">%data%</div>';
+// var HTMLschoolLocation = '<div class="location-text">%data%</div>';
+// var HTMLschoolMajor = '<em><br>Major: %data%</em>';
+
+// var HTMLonlineClasses = '<h3>Online Classes</h3>';
+// var HTMLonlineTitle = '<a href="#">%data%';
+// var HTMLonlineSchool = ' - %data%</a>';
+// var HTMLonlineDates = '<div class="date-text">%data%</div>';
+// var HTMLonlineURL = '<br><a href="#">%data%</a>';
+
 
 }
 
