@@ -1,3 +1,4 @@
+// Bio object definition.
 var bio = {
   "name": "Richard Gieg",
   "role": "Software Engineer",
@@ -15,20 +16,23 @@ var bio = {
   "bioPic": "images/fry.jpg"
 };
 
-bio.display = function() {
-  // Name and role.
+// Bio object methods.
+bio.displayNameAndRole = function() {
   var formattedName = HTMLheaderName.replace('%data%', this.name);
   var formattedRole = HTMLheaderRole.replace('%data%', this.role);
   $('#header').prepend(formattedRole);
   $('#header').prepend(formattedName);
+}
 
-  // Contacts in header and footer.
+bio.displayContacts = function() {
   for (var contact in this.contacts) {
     var formattedContact = HTMLcontactGeneric.replace('%contact%', contact);
     formattedContact = formattedContact.replace('%data%', this.contacts[contact]);
     $('#topContacts, #footerContacts').append(formattedContact);
   }
+}
 
+bio.displayPicAndWelcomeMessage = function() {
   // Bio pic.
   var formattedPic = HTMLbioPic.replace('%data%', this.bioPic);
   $('#header').append(formattedPic);
@@ -36,16 +40,27 @@ bio.display = function() {
   // Welcome message.
   var formattedWelcome = HTMLwelcomeMsg.replace('%data%', this.welcomeMessage);
   $('#header').append(formattedWelcome);
+}
 
-  // Skills.
-  $('#header').append(HTMLskillsStart);
+bio.displaySkills = function() {
   var len = this.skills.length;
-  for (var i = 0; i < len; i++) {
-    var formattedSkill = HTMLskills.replace('%data%', this.skills[i]);
-    $('#skills').append(formattedSkill);
+  if (len > 0) {
+    $('#header').append(HTMLskillsStart);
+    for (var i = 0; i < len; i++) {
+      var formattedSkill = HTMLskills.replace('%data%', this.skills[i]);
+      $('#skills').append(formattedSkill);
+    }
   }
 }
 
+bio.display = function() {
+  this.displayNameAndRole();
+  this.displayContacts();
+  this.displayPicAndWelcomeMessage();
+  this.displaySkills();
+}
+
+// Work object definition.
 var work = {
   "jobs": [
     {
@@ -72,6 +87,7 @@ var work = {
   ]
 };
 
+// Work object methods.
 work.display = function() {
   var len = this.jobs.length;
   for (var i = 0; i < len; i++) {
@@ -92,6 +108,7 @@ work.display = function() {
   }
 };
 
+// Projects object definition.
 var projects = {
   "projects": [
     {
@@ -127,6 +144,7 @@ var projects = {
   ]
 };
 
+// Projects object methods.
 projects.display = function() {
   var len = this.projects.length;
   for (var i = 0; i < len; i++) {
@@ -152,6 +170,7 @@ projects.display = function() {
   }
 };
 
+// Education object definition.
 var education = {
   "schools": [
     {
@@ -167,30 +186,71 @@ var education = {
     {
       "title": "JavaScript Basics",
       "school": "Udacity",
-      "dates": 2015,
+      "date": 2015,
       "url": "http://www.udacity.com/course/ud804"
     }
   ]
 };
 
-education.display = function() {
-// var HTMLschoolStart = '<div class="education-entry"></div>';
-// var HTMLschoolName = '<a href="#">%data%';
-// var HTMLschoolDegree = ' -- %data%</a>';
-// var HTMLschoolDates = '<div class="date-text">%data%</div>';
-// var HTMLschoolLocation = '<div class="location-text">%data%</div>';
-// var HTMLschoolMajor = '<em><br>Major: %data%</em>';
+// Education object methods.
+education.displaySchools = function() {
+  var len = this.schools.length;
+  for (var i = 0; i < len; i++) {
+    $("#education").append(HTMLschoolStart);
 
-// var HTMLonlineClasses = '<h3>Online Classes</h3>';
-// var HTMLonlineTitle = '<a href="#">%data%';
-// var HTMLonlineSchool = ' - %data%</a>';
-// var HTMLonlineDates = '<div class="date-text">%data%</div>';
-// var HTMLonlineURL = '<br><a href="#">%data%</a>';
+    var formattedNameAndDegree =
+      HTMLschoolName.replace('%data%', this.schools[i].name);
+    formattedNameAndDegree = formattedNameAndDegree +
+      HTMLschoolDegree.replace('%data%', this.schools[i].degree);
+    $(".education-entry:last").append(formattedNameAndDegree);
 
+    var formattedDates =
+      HTMLschoolDates.replace('%data%', this.schools[i].date);
+    $(".education-entry:last").append(formattedDates);
 
+    var mLen = this.schools[i].majors.length;
+    for (var j = 0; j < mLen; j++) {
+      var formattedMajor =
+        HTMLschoolMajor.replace('%data%', this.schools[i].majors[j]);
+      $(".education-entry:last").append(formattedMajor);
+    }
+
+    var formattedLocation =
+      HTMLschoolLocation.replace('%data%', this.schools[i].location);
+    $('.education-entry:last').append(formattedLocation);
+  }
 }
 
-// Display all the info.
+education.displayOnlineCourses = function() {
+  var len = this.onlineCourses.length;
+  if (len > 0) {
+    $('#education').append(HTMLonlineClasses);
+    for (var i = 0; i < len; i++) {
+      $("#education").append(HTMLschoolStart);
+
+      var formattedTitleAndSchool =
+        HTMLonlineTitle.replace('%data%', this.onlineCourses[i].title);
+      formattedTitleAndSchool = formattedTitleAndSchool +
+        HTMLonlineSchool.replace('%data%', this.onlineCourses[i].school);
+      $(".education-entry:last").append(formattedTitleAndSchool);
+
+      var formattedDates =
+        HTMLonlineDates.replace('%data%', this.onlineCourses[i].date);
+      $(".education-entry:last").append(formattedDates);
+
+      var formattedUrl =
+        HTMLonlineURL.replace('%data%', this.onlineCourses[i].url);
+      $('.education-entry:last').append(formattedUrl);
+    }
+  }
+}
+
+education.display = function() {
+  this.displaySchools();
+  this.displayOnlineCourses();
+}
+
+// Display info from all objects.
 bio.display();
 work.display();
 projects.display();
