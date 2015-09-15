@@ -135,7 +135,7 @@ var education = {
       "location": "Suisun City, CA",
       "degree": "N/A",
       "majors": ["Computer Programming", "Music"],
-      "dates": "2001",
+      "date": 2004,
       "url": "http://www.solano.edu/"
     }
   ],
@@ -143,7 +143,7 @@ var education = {
     {
       "title": "JavaScript Basics",
       "school": "Udacity",
-      "dates": "2014",
+      "dates": 2015,
       "url": "http://www.udacity.com/course/ud804"
     }
   ]
