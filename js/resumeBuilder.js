@@ -16,11 +16,13 @@ var bio = {
 };
 
 bio.display = function() {
+  // Name and role.
   var formattedName = HTMLheaderName.replace('%data%', this.name);
   var formattedRole = HTMLheaderRole.replace('%data%', this.role);
   $('#header').prepend(formattedRole);
   $('#header').prepend(formattedName);
 
+  // Contacts in header and footer.
   var formattedMobile = HTMLmobile.replace('%data%', this.contacts.mobile);
   var formattedEmail = HTMLemail.replace('%data%', this.contacts.email);
   var formattedGithub = HTMLgithub.replace('%data%', this.contacts.github);
@@ -32,12 +34,15 @@ bio.display = function() {
   $('#topContacts, #footerContacts').append(formattedTwitter);
   $('#topContacts, #footerContacts').append(formattedLocation);
 
+  // Bio pic.
   var formattedPic = HTMLbioPic.replace('%data%', this.bioPic);
   $('#header').append(formattedPic);
 
+  // Welcome message.
   var formattedWelcome = HTMLWelcomeMsg.replace('%data%', this.welcomeMessage);
   $('#header').append(formattedWelcome);
 
+  // Skills.
   $('#header').append(HTMLskillsStart);
   var len = this.skills.length;
   for (var i = 0; i < len; i++) {
