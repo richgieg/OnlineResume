@@ -32,7 +32,18 @@ bio.display = function() {
   $('#topContacts, #footerContacts').append(formattedTwitter);
   $('#topContacts, #footerContacts').append(formattedLocation);
 
+  var formattedPic = HTMLbioPic.replace('%data%', this.bioPic);
+  $('#header').append(formattedPic);
 
+  var formattedWelcome = HTMLWelcomeMsg.replace('%data%', this.welcomeMessage);
+  $('#header').append(formattedWelcome);
+
+  $('#header').append(HTMLskillsStart);
+  var len = this.skills.length;
+  for (var i = 0; i < len; i++) {
+    var formattedSkill = HTMLskills.replace('%data%', this.skills[i]);
+    $('#skills').append(formattedSkill);
+  }
 }
 
 var work = {
