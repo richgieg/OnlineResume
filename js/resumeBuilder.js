@@ -73,20 +73,21 @@ var work = {
 };
 
 work.display = function() {
-  for (var job in this.jobs) {
+  var len = this.jobs.length;
+  for (var i = 0; i < len; i++) {
     $("#workExperience").append(HTMLworkStart);
 
     var formattedEmployer =
-      HTMLworkEmployer.replace("%data%", this.jobs[job].employer);
-    var formattedTitle = HTMLworkTitle.replace("%data%", this.jobs[job].title);
+      HTMLworkEmployer.replace("%data%", this.jobs[i].employer);
+    var formattedTitle = HTMLworkTitle.replace("%data%", this.jobs[i].title);
     var formattedEmployerTitle = formattedEmployer + formattedTitle;
     $(".work-entry:last").append(formattedEmployerTitle);
 
-    var formattedDates = HTMLworkDates.replace("%data%", this.jobs[job].dates);
+    var formattedDates = HTMLworkDates.replace("%data%", this.jobs[i].dates);
     $(".work-entry:last").append(formattedDates);
 
     var formattedDescription =
-      HTMLworkDescription.replace("%data%", this.jobs[job].description);
+      HTMLworkDescription.replace("%data%", this.jobs[i].description);
     $(".work-entry:last").append(formattedDescription);
   }
 };
